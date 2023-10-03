@@ -1,8 +1,10 @@
 // This file contains material supporting section 2.9 of the textbook:
 // "Object Oriented Software Engineering" and is issued under the open-source
 // license found at http://www.site.uottawa.ca/school/research/lloseng/
+package design1;
 
 import java.io.*;
+import java.util.Random;
 
 /**
  * This class prompts the user for a set of coordinates, and then 
@@ -68,6 +70,7 @@ public class PointCPTest
     System.out.println("\nAfter asking to store as Cartesian:\n" + point);
     point.convertStorageToPolar();
     System.out.println("\nAfter asking to store as Polar:\n" + point);
+
   }
 
   /**
@@ -160,4 +163,5 @@ public class PointCPTest
     //Return a new PointCP object
     return (new PointCP(coordType, a, b));
   }
+  
 }
