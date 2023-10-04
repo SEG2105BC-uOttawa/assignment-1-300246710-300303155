@@ -29,8 +29,10 @@ public class PerformanceTest {
     public static Vector<Integer> makeVector() {
         Integer integer ;
         Vector<Integer> vector = new Vector(100580000);
-        /*Out of necessity, the vector is initiated with a set size.
-         * If not, my computer consistently runs into an OutOfMemory error. 
+        /*NOTE!
+         * This version initializes vectors with a set index. Further testing was done with a value of 10058000.
+         * This is due to the OutOfMemory error, which did not happen when the size was reduced to 10058000.
+         *But, this version upholds the 10s construction of the arraylist.
          */
         for (int i = 0 ; i<100580000 ; i++) {
             integer = (int) (Math.random() * (9+1)) ;
